@@ -6,9 +6,9 @@ Miskovits Dániel
 
 ```
 kubectl apply -f .\deployment-backapp.yaml
-kubectl expose deployment/backapp --port=8081 --target-port=8080
+kubectl apply -f .\service-backapp.yaml
 kubectl apply -f .\deployment-frontapp.yaml
-kubectl expose deployment/frontapp --port=8080 --target-port=8080
+kubectl apply -f .\service-frontapp.yaml
 kubectl apply -f .\ingress.yaml
 ```
 

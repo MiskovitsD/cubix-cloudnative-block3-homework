@@ -10,6 +10,7 @@ spec:
   selector:
     matchLabels:
       homework: backapp
+      training: block3
   template:
     metadata:
       labels:
@@ -19,6 +20,9 @@ spec:
       containers:
         - name: backapp
           image: quay.io/drsylent/cubix/block3/homework-backapp:springboot3
+          ports:
+            - containerPort: 8080
+              name: web-backapp
           env:
             - name: APP_DEFAULT_MESSAGE
               value: backapp
